@@ -20,11 +20,14 @@ class Mechanic
   end
 
   def car_owners 
-    cars.map { |car| car.car_owner }
+    cars.map do |car| 
+      car.car_owner 
+    end
   end
-
+  
   def list_of_names_of_car_owners_who_have_same_mechanic
-    
+    car_owners.map { |car| puts car.name }
+      #binding.pry    
   end
 
 end

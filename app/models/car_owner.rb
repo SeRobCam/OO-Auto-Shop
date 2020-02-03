@@ -22,8 +22,11 @@ class CarOwner
     list_of_cars_of_owner.map { |car| car.mechanic }
   end
 
-  def average_amount_of_cars_owned 
-    
+  def self.average
+    total_owner = self.all.count 
+    total_cars = Car.all.count 
+    average = total_owner.to_f / total_cars.to_f 
+    average
     #binding.pry
   end
 

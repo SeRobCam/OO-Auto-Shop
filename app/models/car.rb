@@ -21,10 +21,12 @@ class Car
 
   def self.cars_classifications
     self.all.map { |car| car.classification }
+    #binding.pry
   end
 
-  def list_of_mechanics_with_expertise_that_match_classification
-    
+  def expertise
+   Mechanic.all.select { |mech| mech.specialty == self.classification}
+      
   end
 
 
